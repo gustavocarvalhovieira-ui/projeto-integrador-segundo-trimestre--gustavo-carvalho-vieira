@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Configurações Gerais e Resets
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* ==========================================================================
+   Estrutura do Cabeçalho (Header)
+   ========================================================================== */
+.main-header {
+    background-color: #1e293b; /* Azul escuro tecnológico */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que o menu quebre de linha em telas muito pequenas */
+    gap: 15px;
+}
+
+/* Estilização do Título/Logo */
+.logo-area h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.logo-area h1 span {
+    color: #38bdf8; /* Azul claro para destacar o IFA */
+}
+
+/* ==========================================================================
+   Menu de Navegação e Botões
+   ========================================================================== */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilo padrão para todos os botões */
+.nav-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Botão 1: Programação */
+.btn-prog {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-prog:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Botão 2: Robótica */
+.btn-robotica {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+.btn-robotica:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+}
+
+/* Botão 3: Física e Tecnociência */
+.btn-fisica {
+    background-color: #8b5cf6;
+    color: #ffffff;
+}
+
+.btn-fisica:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsividade para Celulares
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
